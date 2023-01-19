@@ -35,28 +35,27 @@ class barang_controller extends CI_Controller
 	}
 
 	function edit($id){
-		$where = array('id_barang' => $id);
+		$where = array('id' => $id);
 		$data['tb_barang'] = $this->barang_model->edit_barang($where,'tb_barang')->result();
 		$this->load->view('edit_barang',$data);
 	}
 
 	function update_barang_db()
 	{
-		$id_barang = $this->input->post('id');
+		$id = $this->input->post('id');
 		$kode_barang = $this->input->post('kode_barang');
 		$nama_barang = $this->input->post('nama_barang');
 		$kondisi_barang = $this->input->post('kondisi_barang');
-		$unit= $this->input->post('unit');
 
 		$data = array (
 			'kode_barang' => $kode_barang,
 			'nama_barang' => $nama_barang,
-			'kondisi_barang' => $kondisi_barang,
-			'unit' => $unit
+			'kondisi_barang' => $kondisi_barang
+
 		);
 
 		$where = array (
-			'id_barang' => $id_barang
+			'id' => $id
 		);
 
 		$this->barang_model->update_barang($where, $data, 'tb_barang');
@@ -65,7 +64,7 @@ class barang_controller extends CI_Controller
 
 	function hapus($id)
 	{
-		$where = array ('id_barang' =>$id);
+		$where = array ('id' =>$id);
 		$this->barang_model->hapus_barang($where,'tb_barang');
 		redirect('barang_controller/ke_barang');
 	}
