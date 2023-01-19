@@ -12,9 +12,9 @@ class barang_model extends CI_Model
     public function simpan()
     {
         $this->load->library('form_validation');
-        $this->form_valdiation->set_rules('kode_barang', 'KODE BARANG', 'required');
+        $this->form_validation->set_rules('kode_barang', 'KODE BARANG', 'required');
         $this->form_validation->set_rules('nama_barang', 'NAMA BARANG', 'required');
-        $this->form_valdiation->set_rules('kondisi_barang', 'KONDISI BARANG', 'required');
+        $this->form_validation->set_rules('kondisi_barang', 'KONDISI BARANG', 'required');
 
         $kode_barang = $this->input->post('kode_barang');
         $nama_barang = $this->input->post('nama_barang');
@@ -28,9 +28,9 @@ class barang_model extends CI_Model
             $data = array (
                 'kode_barang' => $kode_barang,
                 'nama_barang' => $nama_barang,
-                'kondisi' => $kondisi_barang
+                'kondisi_barang' => $kondisi_barang
             );
-            $this->db->isnert('tb_barang', $data);    
+            $this->db->insert('tb_barang', $data);    
         }else {
             echo "<script>alert('Periksa kembali, ada yang kosong tu !');history.go(-1);</script>";
         }
