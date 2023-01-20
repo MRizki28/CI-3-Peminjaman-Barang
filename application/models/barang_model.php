@@ -53,4 +53,13 @@ class barang_model extends CI_Model
         $this->db->delete($table);
     }
 
+
+    public function select($key = null)
+    {
+        if ($key != null) {
+            $this->db->where($key);
+        }
+        // return $this->db->get($this->table)->result_array();
+        return $this->db->get('tb_barang')->result_array();
+    }
 }
