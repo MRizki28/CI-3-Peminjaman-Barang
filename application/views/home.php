@@ -130,7 +130,11 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="row">
+            <?php
+            $jumlah_barang = count($barangs);
+            $jumlah_peminjaman = count($detilss);
             
+         ?>
               <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -146,7 +150,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal"></h6>
+                    <h6 class="text-muted font-weight-normal"><?php echo $jumlah_barang; ?></h6>
                   </div>
                 </div>
               </div>
@@ -165,7 +169,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal"></h6>
+                    <h6 class="text-muted font-weight-normal"><?php echo $jumlah_peminjaman; ?></h6>
                   </div>
                 </div>
               </div>
