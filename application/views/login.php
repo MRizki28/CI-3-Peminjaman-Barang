@@ -1,74 +1,74 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
-    <meta name="description" content="Peminjaman Barang">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?php echo base_url('assets/images/stmik1.png')?>">
-   
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/scss/style.css')?>">
-	<link rel="stylesheet" href="<?php echo base_url('assets/css/normalize.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/themify-icons.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/flag-icon.min.css')?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/cs-skin-elastic.css')?>">
-    
-	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-
-	<div class="sufee-login d-flex align-content-center flex-wrap" >
-	
-        <div class="container">
-			
-            <div class="login-content">
-			<div class="card">
-			<div class="card-header">Form Login</div>
-                <div class="login-form">
-                    <form action="<?php echo site_url('login_controller/login_validation'); ?>" method="post">
-                        
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-addon"><i class="fa fa-user"></i></div>
-								<input class="form-control" name="username" type="username" placeholder="Username" required>
-							</div>
-                        </div>
-                        <div class="form-group">
-							<div class="input-group">
-								<div class="input-group-addon"><i class="fa fa-asterisk"></i></div>							
-								<input class="form-control" name="password" type="password" placeholder="Password" required>
-							</div>
-                        </div>
-                       
-                        <input type="submit" name="submit" class="btn btn-success btn-flat m-b-30 m-t-30" value="Login">
-                        
-                    </form>
-					<br>
-					<center><p>Repost by <a href="https://stokcoding.com/" title="StokCoding.com" target="_blank">StokCoding.com</a></p></center>
-
-                </div>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/mdi/css/materialdesignicons.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/css/vendor.bundle.base.css') ?>">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.png')?> " />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="row w-100 m-0">
+          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+            <div class="card col-lg-4 mx-auto w-25 ">
+              <div class="card-body px-5 py-5">
+                <h3 class="card-title text-left mb-3">Login</h3>
+                <form action="<?php echo site_url('login_controller/login_validation'); ?>" method="POST">
+                  <div class="form-group">
+                    <label>Username </label>
+                    <input type="text" name="username" class="form-control p_input text-white">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control p_input text-white">
+                  </div>
+                  <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input"> Remember me </label>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                  <input type="submit" name="submit" class="btn btn-primary w-100 py-2" value="Login">
+                  </div>
+        
+                 
+                </form>
+              </div>
             </div>
-			</div>
+          </div>
+          <!-- content-wrapper ends -->
         </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
     </div>
-
-
-    <script src="<?php echo base_url('assets/js/vendor/jquery-2.1.4.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/popper.min.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/plugins.js');?>"></script>
-    <script src="<?php echo base_url('assets/js/main.js');?>"></script>
-
-
-</body>
-
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="<?php echo base_url('assets/vendors/js/vendor.bundle.base.js">')?>"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="<?php echo base_url('assets/js/off-canvas.js">')?>"></script>
+    <script src="<?php echo base_url('assets/js/hoverable-collapse.js">')?>"></script>
+    <script src="<?php echo base_url('assets/js/misc.js">')?>"></script>
+    <script src="<?php echo base_url('assets/js/settings.js">')?>"></script>
+    <script src="<?php echo base_url('assets/js/todolist.js">')?>"></script>
+    <!-- endinject -->
+  </body>
 </html>
