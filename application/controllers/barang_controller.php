@@ -17,11 +17,8 @@ class barang_controller extends CI_Controller
 	}
 
 	function add()
-	{
-		
-			$this->load->view('add_barang');
-	
-		
+	{	
+			$this->load->view('barang');
 	}
 
 	function save()
