@@ -39,6 +39,9 @@ class barang_controller extends CI_Controller
 
 	function update_barang_db()
 	{
+
+
+		
 		$id = $this->input->post('id');
 		$kode_barang = $this->input->post('kode_barang');
 		$nama_barang = $this->input->post('nama_barang');
@@ -61,8 +64,13 @@ class barang_controller extends CI_Controller
 
 	function hapus($id)
 	{
-		$where = array ('id' =>$id);
-		$this->barang_model->hapus_barang($where,'tb_barang');
-		redirect('barang_controller/ke_barang');
+		try {
+			$where = array ('id' =>$id);
+			$this->barang_model->hapus_barang($where,'tb_barang');
+			redirect('barang_controller/ke_barang');
+		} catch (Exception $e) {
+			// Menangani kesalahan dan menampilkan pesan error
+			echo "Error: " . $e->getMessage();
+		}
 	}
 }
