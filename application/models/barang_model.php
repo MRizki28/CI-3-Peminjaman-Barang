@@ -49,8 +49,13 @@ class barang_model extends CI_Model
 
     public function hapus_barang($where, $table)
     {
-        $this->db->where($where);
-        $this->db->delete($table);
+		try{
+			$this->db->where($where);
+			$this->db->delete($table);
+		}catch(Exception $e){
+			echo "<script>alert('Periksa kembali, ada yang kosong tu !');history.go(-1);</script>";
+		}
+     
     }
 
 
