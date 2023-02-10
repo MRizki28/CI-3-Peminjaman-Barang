@@ -142,16 +142,16 @@
                 <form class="forms-sample" action="<?php echo site_url('barang_controller/update_barang_db'); ?>" method="post">
                   <div class="form-group">
                     <label for="kode_barang">Kode Barang</label>
-                    <input type="number" class="form-control text-white" id="kode_barang" name="kode_barang" value="<?php echo $info->kode_barang; ?>" placeholder="Name">
+                    <input type="number" class="form-control text-white" id="kode_barang" name="kode_barang" value="<?php echo $info->kode_barang; ?>" placeholder="Name" required>
                     <input type="hidden" id="id" name="id" value="<?php echo $info->id; ?>" class="form-control">
                 </div>
                   <div class="form-group">
                     <label for="nama_barang">Nama Barang</label>
-                    <input type="text" class="form-control text-white" id="nama_barang" name="nama_barang" value="<?php echo $info->nama_barang; ?>" placeholder="Email">
+                    <input type="text" class="form-control text-white" id="nama_barang" name="nama_barang" value="<?php echo $info->nama_barang; ?>" placeholder="Email" required>
                   </div>
                   <div class="form-group">
                     <label for="kondisi_barang">Kondisi Barang</label>
-                    <select class="form-control text-white" id="kondisi_barang" name="kondisi_barang" value="<?php echo $info->kondisi_barang; ?>">
+                    <select class="form-control text-white" id="kondisi_barang" name="kondisi_barang" value="<?php echo $info->kondisi_barang; ?>" required>
                       <option>Baik</option>
                       <option>Sedikit Rusak</option>
                     </select>
